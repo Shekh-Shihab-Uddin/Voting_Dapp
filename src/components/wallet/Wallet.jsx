@@ -30,7 +30,8 @@ const Wallet = ({ children }) => {
       await window.ethereum.request({
         method:"eth_requestAccounts"
       })
-      const contractAddress = "0x81781b6FDD1218733Fb8fA3ea00Ed1D050228E68";
+      0xcc2b6D945703905a1f21B4D7293820802DA08AF3
+      const contractAddress = "0xcc2b6D945703905a1f21B4D7293820802DA08AF3";
       //to create contract instance - abi and contract address
       const contract = new web3.eth.Contract(ABI, contractAddress);
       setState({ web3: web3, contract: contract });

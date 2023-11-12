@@ -30,7 +30,8 @@ const [winner, setWinner] = useState("No Winner");
       endTimeSeconds
     }
     try{
-      const res = await fetch("http://localhost:3000/api/time-bound",{
+      // const res = await fetch("http://localhost:3000/api/time-bound",{
+      const res = await fetch("https://voting-server-p92r.onrender.com/api/time-bound",{
         method: "POST",
         headers:{
           "content-type":"application/json"
@@ -43,7 +44,8 @@ const [winner, setWinner] = useState("No Winner");
       // console.log(data);
   
       if(data.message === "Voting time started"){
-        await contract.methods.voteTime(startTimeSeconds,endTimeSeconds).send({from: account, gas:480000});
+        // await contract.methods.voteTime(startTimeSeconds,endTimeSeconds).send({from: account, gas:480000});
+        await contract.methods.voteTime(startTimeSeconds,endTimeSeconds).send({from: account});
         toast.success("Voting started");
       }else{
         toast.error("Voting should be less than 24 hours");

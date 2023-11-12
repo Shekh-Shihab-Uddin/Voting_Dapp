@@ -22,7 +22,8 @@ const VoterRegistration = async(event)=>{
     gender
   }
   try{
-    const res = await fetch("http://localhost:3000/api/voter-verification",{
+    // const res = await fetch("http://localhost:3000/api/voter-verification",{
+    const res = await fetch("https://voting-server-p92r.onrender.com/api/voter-verification",{
       method: "POST",
       headers:{
         "content-type":"application/json"
@@ -35,7 +36,8 @@ const VoterRegistration = async(event)=>{
     // console.log(data);
 
     if(data.message === "gender was sent correctly"){
-      await contract.methods.voterRegister(name, age, gender).send({from:account, gas:480000});
+      // await contract.methods.voterRegister(name, age, gender).send({from:account, gas:480000});
+      await contract.methods.voterRegister(name, age, gender).send({from:account});
       toast.success("Regstration Successfull");
     }else{
       toast.error("Registration Failed");

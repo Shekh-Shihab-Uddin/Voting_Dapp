@@ -25,7 +25,8 @@ const CandidateRegistration = async(event)=>{
     gender
   }
   try{
-    const res = await fetch("http://localhost:3000/api/candidate-verification",{
+    // const res = await fetch("http://localhost:3000/api/candidate-verification",{
+    const res = await fetch("https://voting-server-p92r.onrender.com/api/candidate-verification",{
       method:"POST",
       headers:{
         "content-type":"application/json"
@@ -36,7 +37,8 @@ const CandidateRegistration = async(event)=>{
     const data = await res.json();
     // console.log(data)
     if(data.message === "Party and gender are valid"){
-      await contract.methods.candidateRegister(name, party, age, gender).send({from:account, gas:480000});
+      // await contract.methods.candidateRegister(name, party, age, gender).send({from:account, gas:480000});
+      await contract.methods.candidateRegister(name, party, age, gender).send({from:account});
       toast.success("Registration Successfull");
     }else{
       toast.error("Registration Failed");
