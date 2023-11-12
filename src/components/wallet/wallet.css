@@ -1,0 +1,18 @@
+.connectBtn {
+  width: fit-content;
+  background-color: rgb(3, 181, 194);
+  color: white;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 16px auto 24px; /* Centering the button using margin */
+  display: block; /* Ensures the button is a block-level element */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.connectBtn:hover {
+  background-color: #7be5e0;
+}

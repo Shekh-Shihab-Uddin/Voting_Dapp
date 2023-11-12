@@ -1,0 +1,155 @@
+.status-nav {
+  text-align: center;
+  position: fixed;
+  height: 60px; /* Reduce the height */
+  width: 100%;
+  background-color: rgb(3, 181, 194); /* Change to a specific color */
+  color: #fff; /* Change text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg-wrapper {
+  height: auto; /* Change height to auto */
+  width: 480px;
+  background: rgb(3, 181, 194);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  font-weight: bold;
+}
+.reg-img-wrapper h1 {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+}
+.voter-reg-wrapper {
+  width: 100%;
+  height: auto; /* Change height to auto */
+  background-color: #f5f5f5; /* Change to a specific color */
+  display: flex;
+  flex-direction: column; /* Center content vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-top: 120px; /* Adjust padding */
+}
+
+.voter-form {
+  width: 480px;
+  background-color: #fff; /* Change background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center form horizontally */
+  padding-top: 0px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.voter-form h1 {
+  font-weight: bold; /* Adjust font weight */
+  font-size: 34px; /* Decrease font size */
+  margin: 24px; /* Adjust margin */
+}
+
+.voter-form label {
+  display: block;
+  margin-bottom: 8px; /* Adjust margin */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px; /* Increase font size */
+  letter-spacing: 2px; /* Adjust letter spacing */
+}
+
+.voter-form input {
+  width: 100%;
+  padding: 12px; /* Adjust padding */
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.regBtn {
+  width: 100%;
+  background-color: rgb(3, 181, 194); /* Change button color */
+  color: white;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px; /* Increase font size */
+  margin-top: 16px; /* Adjust margin */
+  margin-bottom: 24px; /* Adjust margin */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Adjust letter spacing */
+}
+
+.regBtn:hover {
+  background-color: #7be5e0; /* Change button hover color */
+}
+
+/* Additional styles to remove table borders on two sides */
+table.no-border-sides {
+  border-collapse: separate;
+  border-spacing: 0 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+table.no-border-sides td,
+table.no-border-sides th {
+  border-left: none;
+  border-right: none;
+}
+
+/* =========media queries========== */
+@media screen and (max-width: 420px) {
+  .voter-form {
+    height: auto; /* Change height to auto */
+    padding: 24px; /* Adjust padding */
+    max-width: 300px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .voter-reg-wrapper {
+    gap: 16px; /* Adjust the gap between items */
+    padding-top: 80px; /* Adjust padding at the top */
+  }
+
+  .voter-form {
+    width: 80%; /* Adjust the width */
+  }
+
+  .voter-form h1 {
+    font-size: 20px; /* Adjust font size */
+    margin-bottom: 16px; /* Adjust margin */
+  }
+
+  .voter-form label {
+    font-size: 12px; /* Decrease font size */
+    letter-spacing: 1px; /* Adjust letter spacing */
+  }
+
+  .voter-form input {
+    padding: 10px; /* Adjust padding */
+    font-size: 12px; /* Decrease font size */
+  }
+
+  .regBtn {
+    padding: 12px 14px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+    margin-top: 12px; /* Adjust margin */
+    margin-bottom: 20px; /* Adjust margin */
+  }
+}

@@ -1,0 +1,123 @@
+.reg-cand-wrapper {
+  width: 100%;
+  height: auto; /* Change height to auto */
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center content horizontally */
+  padding-top: 120px !important;
+}
+
+.reg-img-wrapper {
+  height: auto; /* Change height to auto */
+  width: 480px;
+  background: rgb(3, 181, 194);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  padding: 24px;
+}
+.reg-img-wrapper h1 {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+}
+.reg-img-wrapper p {
+  text-align: center;
+  color: #666;
+  opacity: 0.9;
+}
+.reg-img-wrapper img {
+  margin-top: 24px;
+}
+.can-reg-form {
+  width: 100%; /* Make the form full width */
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center form horizontally */
+  padding: 24px; /* Adjust padding */
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+}
+.can-reg-form h3 {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.can-reg-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.can-reg-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 14px;
+}
+
+.regBtn {
+  width: 100%;
+  background-color: #56dfe9;
+  color: white;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.regBtn:hover {
+  background-color: #7be5e0;
+}
+
+/* =========media queries========== */
+@media screen and (max-width: 420px) {
+  .reg-cand-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding-top: 80px !important;
+  }
+  .reg-img-wrapper {
+    height: auto;
+    width: auto;
+    margin: 12px;
+    gap: 12px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .reg-img-wrapper h1 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  .reg-img-wrapper p {
+    font-size: 12px;
+  }
+  .reg-img-wrapper img {
+    width: 160px;
+    margin-top: 0;
+  }
+  .can-reg-form {
+    padding: 0;
+    max-width: 300px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .regBtn {
+    margin-bottom: 0px;
+  }
+}
